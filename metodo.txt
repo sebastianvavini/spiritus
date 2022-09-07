@@ -1,0 +1,3 @@
+if (respirar()<80%) error
+
+if (pensar() > 20%) error 
