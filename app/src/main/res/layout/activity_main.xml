@@ -1,20 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+
+    <Chronometer
+        android:id="@+id/stopwatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="29sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+         />
+
+
+
+
     <Button
         android:id="@+id/dinamicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RESPIRA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:backgroundTint="@color/black"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+       />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="CONTAGEM"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/dinamicButton" />
+
+    <TextView
+        android:id="@+id/timeRespiraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countText"
+        android:layout_centerHorizontal="true"
+        android:text="RELAXANDO: "
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/timeAcaoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="CONCENTRACAO: "
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/timeRespiraText" />
+
+
+
+</RelativeLayout>
