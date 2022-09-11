@@ -14,15 +14,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
     var running = false
     var pausetopwatch: Long =0
-    private var count:Int =0
-
+    private var inflexoes:Int =0
     private  var duracaoRespira: Tempo= Tempo()
-
-
     private var duracaoAcao:Tempo= Tempo()
-    var status:String="Parado"
+    private var duracaoTotal:Tempo=duracaoAcao.somar(duracaoRespira)
 
 
+    var status:String=Constants.STATUS.PARADO
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,38 +57,50 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onClick(v: View) {
         if (v.id == R.id.dinamicButton) {
 
-            count=++count
-            binding.countText.setText("ESTALOS: ${count.toString()}")
+            inflexoes=++inflexoes
+            binding.countText.setText("${Constants.TEXTVIEW.INFLEXOES}: ${inflexoes.toString()}")
 
-
-
-            if(dinamicButton.text=="RESPIRA") {
-                println("Inicio da Respiração...")
-                status="RESPIRANDO"
-                dinamicButton.setText("AÇÃO")
-                dinamicButton.setBackgroundColor(Color.BLACK)
-                binding.stopwatch.setTextColor(Color.BLUE)
-                somarAcao(binding.stopwatch.text.toString())
-                Starttimer()
-                resettimer()
-
-
+            if(dinamicButton.text==Constants.BUTTON.RESPIRA) {
+                modoRespira()
 
             }else {
-                println("inicio da Ação...")
-                dinamicButton.setText("RESPIRA")
-                dinamicButton.setBackgroundColor(Color.RED)
-                binding.stopwatch.setTextColor(Color.RED)
-
-                somarRespira(binding.stopwatch.text.toString())
-                if(count >=1){
-
-                    binding.timeRespiraText.setText("RESPIRANDO:${duracaoRespira.toString()}")
-                }
-                resettimer()
+               modoAcao()
             }
+            somarTotal()
+            exibirEstatisticas()
 
         }
+    }
+    private fun exibirEstatisticas(){
+        binding.timeTotalText.setText("TOTAL: ${duracaoTotal.toString()}s ")
+        binding.percentRespirandoText.setText (
+            "RELAXANDO: ${duracaoRespira}/${duracaoTotal} ")
+        binding.percentConcentrandoText.setText("" +
+                "CONCENTRANDO:${duracaoAcao}/${duracaoTotal} ")
+        binding.status.setText(status)
+    }
+    private fun modoRespira(){
+        status=Constants.STATUS.RELAX
+        dinamicButton.setText("AÇÃO")
+        dinamicButton.setBackgroundColor(Color.BLACK)
+        binding.stopwatch.setTextColor(Color.BLUE)
+        calcularDuracaoAcao(binding.stopwatch.text.toString())
+
+
+        println(status)
+        Starttimer()
+        resettimer()
+    }
+    private fun modoAcao(){
+        status=Constants.STATUS.EM_ACAO
+        dinamicButton.setText(Constants.BUTTON.RESPIRA)
+        dinamicButton.setBackgroundColor(Color.RED)
+        binding.stopwatch.setTextColor(Color.RED)
+
+        calcularDuracaoRespira(binding.stopwatch.text.toString())
+
+        println(status)
+        resettimer()
     }
 
     private fun Starttimer(){
@@ -115,15 +125,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         binding.stopwatch.base = SystemClock.elapsedRealtime()
         pausetopwatch=0
     }
-    private fun somarRespira(tempo:String){
+    private fun calcularDuracaoRespira(tempo:String){
        var duracao:Tempo= Tempo().convertStringEmTempo(tempo)
         this.duracaoRespira= this.duracaoRespira.somar(duracao)
 
     }
 
-    private fun somarAcao(tempo:String){
-        this.duracaoAcao=Tempo().convertStringEmTempo(tempo)
+    private fun calcularDuracaoAcao(tempo:String){
+        var duracao:Tempo= Tempo().convertStringEmTempo(tempo)
+        this.duracaoAcao= this.duracaoAcao.somar(duracao)
 
     }
+    private fun somarTotal(){
+
+        this.duracaoTotal= this.duracaoAcao.somar(duracaoRespira)
+
+    }
+
 
 }

@@ -31,9 +31,9 @@ class Tempo {
     }
 
     fun somar(tempo:Tempo):Tempo{
-        
+
          var total= this.totalEmSegundos+tempo.totalEmSegundos
-        var duracao:Tempo=Tempo()
+        var duracao=Tempo()
         duracao.setTotalSegundos(total)
 
         return duracao

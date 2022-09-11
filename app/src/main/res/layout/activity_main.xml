@@ -17,50 +17,61 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
          />
-
-
-
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stopwatch"
+        android:layout_centerHorizontal="true"
+        android:text="STATUS: "
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/dinamicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESPIRA"
+
+        android:layout_centerInParent="true"
         android:backgroundTint="@color/black"
-
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:text="RESPIRA" />
        />
-
-
-
 
 
     <TextView
         android:id="@+id/countText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="CONTAGEM"
+        android:layout_below="@id/dinamicButton"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/dinamicButton" />
+        android:text="INFLEXÕES"
+        android:textSize="20sp" />
+
+
 
     <TextView
-        android:id="@+id/timeRespiraText"
+        android:id="@+id/timeTotalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/countText"
         android:layout_centerHorizontal="true"
+        android:text="TOTAL: "
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/percentRespirandoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTotalText"
+        android:layout_centerHorizontal="true"
         android:text="RELAXANDO: "
         android:textSize="20sp" />
     <TextView
-        android:id="@+id/timeAcaoText"
+        android:id="@+id/percentConcentrandoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="CONCENTRACAO: "
+        android:layout_below="@id/percentRespirandoText"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/timeRespiraText" />
+        android:text="CONCENTRANDO: "
+        android:textSize="20sp" />
 
 
 
