@@ -3,4 +3,8 @@
     <string name="button_start">Start</string>
     <string name="button_pause">Pause</string>
     <string name="button_reset">zero</string>
+    <string name="totaltime">TEMPO TOTAL:</string>
+    <string name="INFLECTIONS">INFLEXÕES</string>
+    <string name="RELAX">RELAXANDO:</string>
+    <string name="CONCENTRING">CONCENTRANDO:</string>
 </resources>

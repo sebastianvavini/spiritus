@@ -7,16 +7,13 @@
     tools:context=".MainActivity">
 
 
-
-
     <Chronometer
         android:id="@+id/stopwatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="29sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-         />
+        android:textSize="40sp" />
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
@@ -25,6 +22,16 @@
         android:layout_centerHorizontal="true"
         android:text="STATUS: "
         android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status"
+        android:layout_centerHorizontal="true"
+
+        android:background="@color/white"
+
+        android:src="@drawable/settings_ic" />
 
     <Button
         android:id="@+id/dinamicButton"
@@ -43,9 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/dinamicButton"
         android:layout_centerHorizontal="true"
-        android:text="INFLEXÕES"
+        android:text="@string/INFLECTIONS"
         android:textSize="20sp" />
-
 
 
     <TextView
@@ -54,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/countText"
         android:layout_centerHorizontal="true"
-        android:text="TOTAL: "
+        android:text="@string/totaltime"
         android:textSize="20sp" />
     <TextView
         android:id="@+id/percentRespirandoText"
@@ -62,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/timeTotalText"
         android:layout_centerHorizontal="true"
-        android:text="RELAXANDO: "
+        android:text="@string/RELAX"
         android:textSize="20sp" />
     <TextView
         android:id="@+id/percentConcentrandoText"
@@ -70,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/percentRespirandoText"
         android:layout_centerHorizontal="true"
-        android:text="CONCENTRANDO: "
+        android:text="@string/CONCENTRING"
         android:textSize="20sp" />
 
 
