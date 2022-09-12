@@ -1,4 +1,4 @@
-# spiritus
+# spiritus CRONOMETRO
 para cada 60 segundos
 
 1: pensar 12 segundos (20%) 
