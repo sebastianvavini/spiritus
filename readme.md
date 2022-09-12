@@ -1,4 +1,7 @@
 # spiritus CRONOMETRO
+
+(whatsapp - 86 99501 3330)
+
 para cada 60 segundos
 
 1: pensar 12 segundos (20%) 
