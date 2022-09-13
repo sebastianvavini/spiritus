@@ -7,6 +7,8 @@ import android.os.SystemClock
 import android.view.View
 import android.widget.Button
 import com.goodbit.spiritus.databinding.ActivityMainBinding
+import java.lang.Double
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var binding: ActivityMainBinding
@@ -16,7 +18,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     var pausetopwatch: Long =0
     private var inflexoes:Int =0
     private  var duracaoRespira: Tempo= Tempo()
+    private var percentRespirando= String()
     private var duracaoAcao:Tempo= Tempo()
+    private var percentEmAcao:String=String()
     private var duracaoTotal:Tempo=duracaoAcao.somar(duracaoRespira)
 
 
@@ -66,17 +70,36 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
             }else {
                modoAcao()
             }
-            somarTotal()
+            calculaPercentagem()
             exibirEstatisticas()
+
 
         }
     }
+    private fun calculaPercentagem(){
+        somarTotal()
+        var respirando: Int =duracaoRespira.totalEmSegundos
+        var emacao:Int = duracaoAcao.totalEmSegundos
+        var totalTime:Int= duracaoTotal.totalEmSegundos
+        if(totalTime>0){
+            percentEmAcao=  "%.2f".format((emacao.toDouble()/totalTime.toDouble()*100))
+            percentRespirando= "%.2f".format((respirando.toDouble()/totalTime.toDouble()*100))
+
+        }
+    }
+    private fun somarTotal(){
+
+        this.duracaoTotal= this.duracaoAcao.somar(duracaoRespira)
+
+
+    }
     private fun exibirEstatisticas(){
+
         binding.timeTotalText.setText("TOTAL: ${duracaoTotal.toString()}s ")
         binding.percentRespirandoText.setText (
-            "RELAXANDO: ${duracaoRespira}/${duracaoTotal} ")
+            "RELAXANDO: ${duracaoRespira}/${duracaoTotal} (${percentRespirando}%)")
         binding.percentConcentrandoText.setText("" +
-                "CONCENTRANDO:${duracaoAcao}/${duracaoTotal} ")
+                "CONCENTRANDO:${duracaoAcao}/${duracaoTotal} (${percentEmAcao}%)")
         binding.status.setText(status)
     }
     private fun modoRespira(){
@@ -136,11 +159,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         this.duracaoAcao= this.duracaoAcao.somar(duracao)
 
     }
-    private fun somarTotal(){
 
-        this.duracaoTotal= this.duracaoAcao.somar(duracaoRespira)
-
-    }
 
 
 }
