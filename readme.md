@@ -29,3 +29,6 @@ ou 3x
 36 seg e pausa de 02:24 (144s)
 
 e assim por diante
+
+Pensando na dificuldade que é trabalhar em apenas 12s, desenvolvi este cronometro que voce pode mudar o modo de ação para trabalho sempre que perceber que esta mais tenso ou sem ar. E mudar respirando sempre que achar que ja esta relaxado o suficiente. Fica ao seu criterio manter ou não a proporção 80/20. Eu particularmente me fiscalizo para mantê-la.
+
