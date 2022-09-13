@@ -7,7 +7,7 @@
 
 Este app auxilia você a monitorar quanto tempo voce medita.
 
-Tem foco total na sua respiração. Assim voce sabe qual é a porcentagem de tempo que você da atenção à sua respiração.
+Tem foco total na sua respiração. Assim voce sabe qual é a porcentagem de tempo em que você deu atenção à sua respiração.
 
 Ao direcionar sua atenção para sua respiração, sua atenção se volta mais facilmente para o AGORA.
 
