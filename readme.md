@@ -1,4 +1,4 @@
-# spiritus CRONOMETRO (whatsapp - 86 99501 3330)
+# spiritus cronometro (whatsapp - 86 99501 3330)
 
 
 
