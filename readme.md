@@ -1,6 +1,7 @@
 # spiritus CRONOMETRO (whatsapp - 86 99501 3330)
 
 Este app auxilia você a monitorar quanto tempo voce medita.
+
 Tem foco total na sua respiração. Assim voce sabe qual é a porcentagem de tempo que você da atenção à sua respiração.
 
 Ao direcionar sua atenção para sua respiração, sua atenção se volta mais facilmente para o AGORA.
@@ -30,5 +31,5 @@ ou 3x
 
 e assim por diante
 
-Pensando na dificuldade que é trabalhar em apenas 12s, desenvolvi este cronometro que voce pode mudar o modo de ação para trabalho sempre que perceber que esta mais tenso ou sem ar. E mudar respirando sempre que achar que ja esta relaxado o suficiente. Fica ao seu criterio manter ou não a proporção 80/20. Eu particularmente me fiscalizo para mantê-la.
+Pensando na dificuldade que é trabalhar em apenas 12s, desenvolvi este cronometro que voce pode mudar o modo de ação para respirando sempre que perceber que esta mais tenso ou sem ar. E mudar respirando sempre que achar que ja esta relaxado o suficiente. Fica ao seu criterio manter ou não a proporção 80/20. Eu particularmente me fiscalizo para mantê-la.
 
