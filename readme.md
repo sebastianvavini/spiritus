@@ -13,7 +13,7 @@ Ao direcionar sua atenção para sua respiração, sua atenção se volta mais f
 
 Estima-se que 80% a 90% dos nossos pensamentos são contraproducentes e até nocivos. Sabe-se que ao se direcionar a atenção à respiração, seus pensamentos tendem as diminuir e até a desaparecer.
 
-Esta estimativa conincide com o Principio de pareto. O princípio de Pareto, também conhecido como a regra 80/20, é um fenômeno que afirma que cerca de 80% dos resultados são gerados por 20% das causas. Neste artigo, vamos detalhar o uso do princípio para priorizar as tarefas e os esforços do negócio.
+Esta estimativa conincide com o Principio de pareto. O princípio de Pareto, também conhecido como a regra 80/20, é um fenômeno que afirma que cerca de 80% dos resultados são gerados por 20% das causas. 
 
 Assim para garantir que os 20% de nossos pensamentos sejam os melhores. Sugere-se que  se mantenha uma proporção de relaxamanto/atividade de 80% / 20%
 
