@@ -23,24 +23,6 @@
         android:text="@string/status"
         android:textSize="29sp" />
 
-    <ImageView
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/status"
-        android:layout_centerHorizontal="true"
-
-        android:background="@color/white"
-
-        android:src="@drawable/settings_ic" />
-    <TextView
-        android:id="@+id/pranayamas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/settings"
-        android:layout_centerHorizontal="true"
-        android:text="@string/pranayamas"
-        android:textSize="16sp" />
 
 
 
