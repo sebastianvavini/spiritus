@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     var running = false
     var pausetopwatch: Long =0
     private var inflexoes:Int =0
-    private  var duracaoRespira: Tempo= Tempo()
+    private  var duractionbreathing: Tempo= Tempo()
     private var percentRespirando= String()
-    private var duracaoAcao:Tempo= Tempo()
+    private var duractionAction:Tempo= Tempo()
     private var percentEmAcao:String=String()
-    private var duracaoTotal:Tempo=duracaoAcao.somar(duracaoRespira)
+    private var totalDuraction:Tempo=duractionAction.somar(duractionbreathing)
 
 
     var status:String=Constants.STATUS.PARADO
@@ -77,28 +77,30 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     }
     private fun calculaPercentagem(){
         somarTotal()
-        var respirando: Int =duracaoRespira.totalEmSegundos
-        var acao:Int = duracaoAcao.totalEmSegundos
-        var totalTime:Int= duracaoTotal.totalEmSegundos
+
+        var breathing: Int =duractionbreathing.totalEmSegundos
+        var action:Int = duractionAction.totalEmSegundos
+        var totalTime:Int= totalDuraction.totalEmSegundos
+
         if(totalTime>0){
-            percentEmAcao=  "%.2f".format((acao.toDouble()/totalTime.toDouble()*100))
-            percentRespirando= "%.2f".format((respirando.toDouble()/totalTime.toDouble()*100))
+            percentEmAcao=  "%.2f".format((action.toDouble()/totalTime.toDouble()*100))
+            percentRespirando= "%.2f".format((breathing.toDouble()/totalTime.toDouble()*100))
 
         }
     }
     private fun somarTotal(){
 
-        this.duracaoTotal= this.duracaoAcao.somar(duracaoRespira)
+        this.totalDuraction= this.duractionAction.somar(duractionbreathing)
 
 
     }
     private fun exibirEstatisticas(){
 
-        binding.timeTotalText.setText("TOTAL: ${duracaoTotal.toString()}s ")
+        binding.timeTotalText.setText("TOTAL: ${totalDuraction.toString()}s ")
         binding.percentRespirandoText.setText (
-            "RELAXANDO: ${duracaoRespira}/${duracaoTotal} (${percentRespirando}%)")
+            "RELAXANDO: ${duractionbreathing}/${totalDuraction} (${percentRespirando}%)")
         binding.percentConcentrandoText.setText("" +
-                "CONCENTRANDO:${duracaoAcao}/${duracaoTotal} (${percentEmAcao}%)")
+                "CONCENTRANDO:${duractionAction}/${totalDuraction} (${percentEmAcao}%)")
         binding.status.setText(status)
     }
     private fun modoRespira(){
@@ -149,13 +151,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     }
     private fun calcularDuracaoRespira(tempo:String){
        var duracao:Tempo= Tempo().convertStringEmTempo(tempo)
-        this.duracaoRespira= this.duracaoRespira.somar(duracao)
+        this.duractionbreathing= this.duractionbreathing.somar(duracao)
 
     }
 
     private fun calcularDuracaoAcao(tempo:String){
         var duracao:Tempo= Tempo().convertStringEmTempo(tempo)
-        this.duracaoAcao= this.duracaoAcao.somar(duracao)
+        this.duractionAction= this.duractionAction.somar(duracao)
 
     }
 
