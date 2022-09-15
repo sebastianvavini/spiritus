@@ -7,7 +7,6 @@ import android.os.SystemClock
 import android.view.View
 import android.widget.Button
 import com.goodbit.spiritus.databinding.ActivityMainBinding
-import java.lang.Double
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
@@ -79,10 +78,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     private fun calculaPercentagem(){
         somarTotal()
         var respirando: Int =duracaoRespira.totalEmSegundos
-        var emacao:Int = duracaoAcao.totalEmSegundos
+        var acao:Int = duracaoAcao.totalEmSegundos
         var totalTime:Int= duracaoTotal.totalEmSegundos
         if(totalTime>0){
-            percentEmAcao=  "%.2f".format((emacao.toDouble()/totalTime.toDouble()*100))
+            percentEmAcao=  "%.2f".format((acao.toDouble()/totalTime.toDouble()*100))
             percentRespirando= "%.2f".format((respirando.toDouble()/totalTime.toDouble()*100))
 
         }
