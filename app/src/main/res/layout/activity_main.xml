@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:textSize="80sp" />
+        android:textSize="100sp" />
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
@@ -21,13 +21,7 @@
         android:layout_below="@id/stopwatch"
         android:layout_centerHorizontal="true"
         android:text="@string/status"
-        android:textSize="29sp" />
-
-
-
-
-
-
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/dinamicButton"
@@ -36,8 +30,11 @@
 
         android:layout_centerInParent="true"
         android:backgroundTint="@color/black"
-        android:text="RESPIRA" />
-       />
+        android:text="RESPIRA"
+        android:textSize="30dp"
+
+        />
+
 
 
     <TextView
@@ -47,7 +44,7 @@
         android:layout_below="@id/dinamicButton"
         android:layout_centerHorizontal="true"
         android:text="@string/INFLECTIONS"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
 
     <TextView
@@ -57,7 +54,8 @@
         android:layout_below="@id/countText"
         android:layout_centerHorizontal="true"
         android:text="@string/totaltime"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
+
     <TextView
         android:id="@+id/percentRespirandoText"
         android:layout_width="wrap_content"
@@ -65,7 +63,7 @@
         android:layout_below="@id/timeTotalText"
         android:layout_centerHorizontal="true"
         android:text="@string/RELAX"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
     <TextView
         android:id="@+id/percentConcentrandoText"
         android:layout_width="wrap_content"
@@ -73,7 +71,16 @@
         android:layout_below="@id/percentRespirandoText"
         android:layout_centerHorizontal="true"
         android:text="@string/CONCENTRING"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
+
+    <ToggleButton
+        android:id="@+id/toggle_button"
+        android:text="total Em Horas"
+        android:layout_toRightOf="@+id/timeTotalText"
+        android:layout_below="@+id/countText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 
