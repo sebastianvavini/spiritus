@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:textSize="100sp" />
+        android:textSize="80sp" />
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
@@ -36,7 +36,6 @@
         />
 
 
-
     <TextView
         android:id="@+id/countText"
         android:layout_width="wrap_content"
@@ -44,7 +43,7 @@
         android:layout_below="@id/dinamicButton"
         android:layout_centerHorizontal="true"
         android:text="@string/INFLECTIONS"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
 
     <TextView
@@ -54,7 +53,7 @@
         android:layout_below="@id/countText"
         android:layout_centerHorizontal="true"
         android:text="@string/totaltime"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/percentRespirandoText"
@@ -63,7 +62,7 @@
         android:layout_below="@id/timeTotalText"
         android:layout_centerHorizontal="true"
         android:text="@string/RELAX"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/percentConcentrandoText"
         android:layout_width="wrap_content"
@@ -71,16 +70,19 @@
         android:layout_below="@id/percentRespirandoText"
         android:layout_centerHorizontal="true"
         android:text="@string/CONCENTRING"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
-    <ToggleButton
-        android:id="@+id/toggle_button"
-        android:text="total Em Horas"
-        android:layout_toRightOf="@+id/timeTotalText"
-        android:layout_below="@+id/countText"
-        android:layout_centerHorizontal="true"
+
+
+    <ImageView
+        android:id="@+id/settingsImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:src="@drawable/settings_ic"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
 
 
 
