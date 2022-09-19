@@ -98,9 +98,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
         binding.timeTotalText.setText("TOTAL: ${totalDuraction.toString()}s ")
         binding.percentRespirandoText.setText (
-            "RELAXANDO: ${duractionbreathing}/${totalDuraction} (${percentRespirando}%)")
+            "RELAXANDO: ${duractionbreathing}/${totalDuraction} ")
         binding.percentConcentrandoText.setText("" +
-                "CONCENTRANDO:${duractionAction}/${totalDuraction} (${percentEmAcao}%)")
+                "CONCENTRANDO:${duractionAction}/${totalDuraction} ")
         binding.status.setText(status)
     }
     private fun modoRespira(){
