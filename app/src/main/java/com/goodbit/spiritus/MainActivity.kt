@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     var pausetopwatch: Long =0
     private var inflexoes:Int =0
     private  var duractionbreathing: Tempo= Tempo()
-    private var percentRespirando= String()
+    private var percentExpirando= String()
     private var duractionAction:Tempo= Tempo()
     private var percentEmAcao:String=String()
     private var totalDuraction:Tempo=duractionAction.somar(duractionbreathing)
@@ -61,15 +61,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         if (v.id == R.id.dinamicButton) {
 
             inflexoes=++inflexoes
-            binding.countText.setText("${Constants.TEXTVIEW.INFLEXOES}: ${inflexoes.toString()}")
+            binding.countText.setText("${Constants.TEXTVIEW.INFLEXOES}: ${inflexoes}")
 
-            if(dinamicButton.text==Constants.BUTTON.RESPIRA) {
+            if(dinamicButton.text==Constants.BUTTON.RELAXA) {
                 modoRespira()
 
             }else {
                modoAcao()
             }
             calculaPercentagem()
+
             exibirEstatisticas()
 
 
@@ -84,9 +85,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
         if(totalTime>0){
             percentEmAcao=  "%.2f".format((action.toDouble()/totalTime.toDouble()*100))
-            percentRespirando= "%.2f".format((breathing.toDouble()/totalTime.toDouble()*100))
+            println(percentEmAcao)
+            percentExpirando= "%.2f".format((breathing.toDouble()/totalTime.toDouble()*100))
+            println(percentExpirando)
 
         }
+        println("Calculou Percentagem!")
     }
     private fun somarTotal(){
 
@@ -98,11 +102,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
         binding.timeTotalText.setText("TOTAL: ${totalDuraction.toString()}s ")
         binding.percentRespirandoText.setText (
-            "RELAXANDO: ${duractionbreathing}/${totalDuraction} ")
+            "RELAXANDO: ${duractionbreathing}/${totalDuraction} (${percentExpirando}%)")
         binding.percentConcentrandoText.setText("" +
-                "CONCENTRANDO:${duractionAction}/${totalDuraction} ")
+                "CONCENTRANDO:${duractionAction}/${totalDuraction} (${percentEmAcao}%)")
         binding.status.setText(status)
+        println("Exibir Estatísticas")
     }
+
     private fun modoRespira(){
         status=Constants.STATUS.RELAX
         dinamicButton.setText("AÇÃO")
@@ -117,7 +123,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     }
     private fun modoAcao(){
         status=Constants.STATUS.EM_ACAO
-        dinamicButton.setText(Constants.BUTTON.RESPIRA)
+        dinamicButton.setText(Constants.BUTTON.RELAXA)
         dinamicButton.setBackgroundColor(Color.RED)
         binding.stopwatch.setTextColor(Color.RED)
 
